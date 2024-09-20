@@ -9,17 +9,11 @@
     "48": "images/icon-48.png",
     "128": "images/icon-128.png"
   },
-  "action": {
-      "default_popup": "popup.html"
-    },
   "content_scripts": [
     {
       "js": ["scripts/content.js"],
-      "matches": [
-        "https://developer.chrome.com/docs/extensions/*",
-        "https://developer.chrome.com/docs/webstore/*",
-        "https://medium.com/*/*"
-      ]
+      
+      "matches": ["<all_urls>"]
     }
   ]
   }

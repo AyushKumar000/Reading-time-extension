@@ -13,7 +13,6 @@ if (article) {
   //   badge.classList.add("color-secondary-text", "type--caption");
   //   badge.textContent = `⏱️ ${readingTime} min read`;
   badge.style.width = "160px";
-  badge.style.height = "90px";
   badge.style.backgroundColor = "#f0f0f0";
   badge.style.border = "1px solid #ccc";
   badge.style.padding = "10px";
@@ -43,15 +42,15 @@ if (article) {
   newButton.style.padding = "10px 20px";
   newButton.style.cursor = "pointer";
   newButton.style.fontSize = "16px";
-  newButton.style.marginTop = "5px";
 
   // Append the button to the div, next to the paragraph
   badge.appendChild(newButton);
 
   // Support for API reference docs
   const heading = article.querySelector("h1");
+  const heading1 = document.querySelector("h1");
   // Support for article docs with date
   const date = article.querySelector("time")?.parentNode;
 
-  (date ?? heading).insertAdjacentElement("afterend", badge);
+  (date ?? heading ?? heading1 ).insertAdjacentElement("afterend", badge);
 }
